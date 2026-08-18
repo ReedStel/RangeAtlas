@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RangeAtlas Synthetic Validation · RangeAtlas</title>
+  <style>
+    :root { color-scheme: dark; --bg:#071015; --panel:#0d1b22; --line:#1f3a45; --text:#e8f3f6;
+      --muted:#8da6af; --cyan:#43d9d0; --lime:#b4f34d; --orange:#ffac5e; --red:#ff647c; }
+    * { box-sizing:border-box } body { margin:0; background:radial-gradient(circle at 15% 0,#11323c 0,transparent 30%),
+      var(--bg); color:var(--text); font:15px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif }
+    main { width:min(1120px,calc(100% - 32px)); margin:auto; padding:54px 0 80px }
+    header { display:grid; grid-template-columns:1fr auto; gap:24px; align-items:end; margin-bottom:30px }
+    .eyebrow { color:var(--cyan); text-transform:uppercase; letter-spacing:.18em; font-size:12px; font-weight:800 }
+    h1 { margin:.25rem 0 0; font-size:clamp(42px,8vw,82px); line-height:.95; letter-spacing:-.055em }
+    header p { max-width:630px; color:var(--muted); font-size:17px }
+    .classification { border:1px solid var(--line); border-radius:999px; padding:8px 13px; color:var(--lime); white-space:nowrap }
+    .notice { border:1px solid #285565; background:#0a222b; border-radius:14px; padding:14px 17px; color:#b8d6df }
+    .metrics { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin:22px 0 }
+    .metric,.panel,.finding { background:linear-gradient(145deg,rgba(17,38,47,.96),rgba(10,24,31,.96));
+      border:1px solid var(--line); border-radius:16px }
+    .metric { padding:19px } .metric strong { display:block; font-size:31px; letter-spacing:-.04em }
+    .metric span,.source,.empty { color:var(--muted) } section { margin-top:34px }
+    h2 { font-size:23px; letter-spacing:-.02em } .panel { overflow:auto } table { width:100%; border-collapse:collapse }
+    th,td { text-align:left; padding:14px 16px; border-bottom:1px solid var(--line); white-space:nowrap }
+    th { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.08em } tr:last-child td { border:0 }
+    code { color:#9ee9e4; background:#07151b; border:1px solid #17313b; border-radius:6px; padding:2px 6px }
+    .findings { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px } .finding { padding:18px }
+    .finding h3 { margin:12px 0 8px } .finding p { color:#bed0d6 } .finding-top { display:flex; justify-content:space-between }
+    .pill { border-radius:999px; padding:4px 9px; font-size:11px; font-weight:900; text-transform:uppercase; letter-spacing:.08em }
+    .high,.critical { background:#481c28; color:#ff9bad } .medium { background:#49301d; color:#ffc27c }
+    .low,.information,.info { background:#123942; color:#77e4dc } .validated { background:#284020; color:#c5f67d }
+    .remediation { border-left:3px solid var(--lime); margin-top:14px; padding:8px 12px; color:#cddade }
+    .remediation strong { display:block; color:var(--lime); font-size:11px; text-transform:uppercase; letter-spacing:.1em }
+    .traffic { display:grid; grid-template-columns:repeat(4,1fr); gap:10px } .protocol { background:#0b2028; border:1px solid var(--line); border-radius:12px; padding:14px; display:flex; justify-content:space-between }
+    .protocol span { color:var(--muted) } .protocol strong { color:var(--cyan) }
+    .timeline { list-style:none; padding:0 } .timeline li { display:grid; grid-template-columns:180px 1fr; gap:20px; padding:17px 0; border-bottom:1px solid var(--line) }
+    .timeline time { color:var(--cyan); font-variant-numeric:tabular-nums } .timeline p { margin:5px 0; color:var(--muted) }
+    footer { margin-top:54px; color:var(--muted); border-top:1px solid var(--line); padding-top:22px }
+    @media(max-width:760px) { header { grid-template-columns:1fr } .metrics { grid-template-columns:repeat(2,1fr) }
+      .findings { grid-template-columns:1fr } .traffic { grid-template-columns:repeat(2,1fr) } .timeline li { grid-template-columns:1fr;gap:5px } }
+  </style>
+</head>
+<body><main>
+  <header><div><div class="eyebrow">RangeAtlas / Evidence report</div><h1>RangeAtlas Synthetic Validation</h1>
+    <p>Correlated evidence from an isolated, authorised cyber range. Generated offline from sanitised tool exports.</p></div>
+    <div class="classification">PUBLIC · SYNTHETIC</div></header>
+  <div class="notice"><strong>Safety boundary:</strong> report generation is offline. No scanner, proxy, capture, or exploitation tool was launched.</div>
+  <div class="metrics">
+    <div class="metric"><strong>2</strong><span>assets</span></div>
+    <div class="metric"><strong>4</strong><span>services</span></div>
+    <div class="metric"><strong>3</strong><span>findings</span></div>
+    <div class="metric"><strong>8</strong><span>packets</span></div>
+    <div class="metric"><strong>1</strong><span>validations</span></div>
+  </div>
+  <section><h2>Asset surface</h2><div class="panel"><table><thead><tr><th>Address</th><th>Hostname</th><th>OS</th><th>Services</th><th>Evidence</th></tr></thead><tbody><tr><td><code>10.77.0.10</code></td><td>kali.range.test</td><td>Linux 6.x (synthetic fixture)</td><td>22/tcp ssh</td><td>Nmap</td></tr><tr><td><code>10.77.0.20</code></td><td>range-web.test</td><td>Ubuntu Linux 22.04 (synthetic fixture)</td><td>22/tcp ssh, 8080/tcp http, 8080/tcp http-proxy</td><td>Metasploit, Nmap</td></tr></tbody></table></div></section>
+  <section><h2>Correlated findings</h2><div class="findings">
+    <article class="finding">
+      <div class="finding-top"><span class="pill low">low</span>
+      <span class="source">Burp Suite</span></div>
+      <h3>Content security policy is not configured</h3><code>10.77.0.20/</code><p>The synthetic training response did not include a Content-Security-Policy header.</p><div class="remediation"><strong>Action</strong>Define a restrictive policy and validate it in report-only mode before enforcement.</div>
+    </article>
+    <article class="finding">
+      <div class="finding-top"><span class="pill validated">validated</span>
+      <span class="source">Metasploit</span></div>
+      <h3>Training service validation marker</h3><code>10.77.0.20</code><p>A deliberately vulnerable fixture path was confirmed inside the isolated range. No external target was involved.</p><div class="remediation"><strong>Action</strong>Review the affected service and verify the relevant vendor hardening guidance.</div>
+    </article>
+    <article class="finding">
+      <div class="finding-top"><span class="pill information">information</span>
+      <span class="source">Burp Suite</span></div>
+      <h3>Server version disclosed by response header</h3><code>10.77.0.20/health</code><p>The lab service returned a detailed synthetic Server header.</p><div class="remediation"><strong>Action</strong>Return a generic server identifier and keep exact component versions in the internal inventory.</div>
+    </article></div></section>
+  <section><h2>Observed protocols</h2><div class="traffic"><div class="protocol"><span>DNS</span><strong>2</strong></div><div class="protocol"><span>HTTP</span><strong>4</strong></div><div class="protocol"><span>ICMP</span><strong>1</strong></div><div class="protocol"><span>TCP</span><strong>1</strong></div></div></section>
+  <section><h2>Controlled validation</h2><ol class="timeline"><li><time>2026-08-19T09:18:15+10:00</time><div><strong>exploit/test/range_validation</strong><p>Session recorded in sanitised workspace export on <code>10.77.0.20</code>. Only session metadata was imported; credentials, loot, and payload data were excluded.</p></div></li></ol></section>
+  <footer>Lab RANGE-DEMO-001 · Analyst Reed Stelfox · Completed 2026-08-19T09:30:00+10:00<br>
+    Generated by RangeAtlas 0.1.0 from synthetic or explicitly authorised evidence.</footer>
+</main></body></html>

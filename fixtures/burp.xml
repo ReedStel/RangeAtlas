@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE issues [
+  <!ELEMENT issues (issue*)>
+  <!ELEMENT issue ANY>
+]>
+<issues burpVersion="2026.7" exportTime="Wed Aug 19 09:12:00 AEST 2026">
+  <issue>
+    <serialNumber>1001</serialNumber>
+    <type>5244416</type>
+    <name>Content security policy is not configured</name>
+    <host ip="10.77.0.20">http://range-web.test:8080</host>
+    <path>/</path>
+    <location>http://range-web.test:8080/</location>
+    <severity>Low</severity>
+    <confidence>Certain</confidence>
+    <issueDetail><![CDATA[The synthetic training response did not include a Content-Security-Policy header.]]></issueDetail>
+    <remediationDetail><![CDATA[Define a restrictive policy and validate it in report-only mode before enforcement.]]></remediationDetail>
+    <request base64="false">GET / HTTP/1.1&#13;&#10;Authorization: Bearer fixture-token-never-imported</request>
+    <response base64="false">HTTP/1.1 200 OK</response>
+  </issue>
+  <issue>
+    <serialNumber>1002</serialNumber>
+    <type>134217728</type>
+    <name>Server version disclosed by response header</name>
+    <host ip="10.77.0.20">http://range-web.test:8080</host>
+    <path>/health</path>
+    <severity>Information</severity>
+    <confidence>Firm</confidence>
+    <issueDetail><![CDATA[The lab service returned a detailed synthetic Server header.]]></issueDetail>
+    <remediationDetail><![CDATA[Return a generic server identifier and keep exact component versions in the internal inventory.]]></remediationDetail>
+  </issue>
+</issues>
+

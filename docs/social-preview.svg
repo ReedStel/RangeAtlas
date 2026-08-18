@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">RangeAtlas social preview</title>
+  <desc id="desc">Offline correlation for cyber-range evidence</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#061016"/><stop offset=".55" stop-color="#102833"/><stop offset="1" stop-color="#071015"/></linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#61dcd5" stroke-opacity=".075"/></pattern>
+    <radialGradient id="halo"><stop stop-color="#43d9d0" stop-opacity=".2"/><stop offset="1" stop-color="#43d9d0" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1280" height="640" fill="url(#bg)"/><rect width="1280" height="640" fill="url(#grid)"/>
+  <circle cx="1010" cy="320" r="245" fill="url(#halo)"/>
+  <g transform="translate(1010 320)" fill="none" stroke-linecap="round">
+    <circle r="165" stroke="#43d9d0" stroke-opacity=".2" stroke-width="2"/>
+    <circle r="108" stroke="#43d9d0" stroke-opacity=".36" stroke-width="2"/>
+    <path d="M0 0-118-86M0 0l136-58M0 0l86 126M0 0-143 69" stroke="#43d9d0" stroke-width="4"/>
+    <g fill="#b4f34d" stroke="none"><circle cx="-118" cy="-86" r="11"/><circle cx="136" cy="-58" r="11"/><circle cx="86" cy="126" r="11"/><circle cx="-143" cy="69" r="11"/></g>
+    <circle r="14" fill="#43d9d0" stroke="none"/>
+  </g>
+  <rect x="74" y="82" width="177" height="42" rx="21" fill="#12323d" stroke="#2c5a68"/>
+  <text x="162" y="109" text-anchor="middle" fill="#43d9d0" font-family="ui-monospace,Consolas,monospace" font-size="15" font-weight="700" letter-spacing="2">AUTHORISED LABS</text>
+  <text x="72" y="286" fill="#f4fafb" font-family="Inter,ui-sans-serif,system-ui,sans-serif" font-size="106" font-weight="850" letter-spacing="-7">RangeAtlas</text>
+  <text x="79" y="348" fill="#a5bbc2" font-family="Inter,ui-sans-serif,system-ui,sans-serif" font-size="30">Turn disconnected security exports into</text>
+  <text x="79" y="390" fill="#a5bbc2" font-family="Inter,ui-sans-serif,system-ui,sans-serif" font-size="30">one defensible evidence report.</text>
+  <g font-family="ui-monospace,Consolas,monospace" font-size="17" font-weight="800">
+    <text x="79" y="508" fill="#43d9d0">NMAP</text><text x="158" y="508" fill="#48626b">·</text>
+    <text x="183" y="508" fill="#43d9d0">WIRESHARK</text><text x="302" y="508" fill="#48626b">·</text>
+    <text x="327" y="508" fill="#43d9d0">BURP</text><text x="389" y="508" fill="#48626b">·</text>
+    <text x="414" y="508" fill="#43d9d0">METASPLOIT</text>
+  </g>
+  <text x="79" y="558" fill="#b4f34d" font-family="ui-monospace,Consolas,monospace" font-size="17">OFFLINE BY DESIGN  /  SYNTHETIC DEMO INCLUDED</text>
+</svg>
+

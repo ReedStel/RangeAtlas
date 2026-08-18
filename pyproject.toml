@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rangeatlas"
+version = "0.1.0"
+description = "Evidence-first reporting for authorised cyber ranges"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+  { name = "Reed Stelfox" }
+]
+keywords = ["cyber-range", "nmap", "wireshark", "burp-suite", "metasploit", "security-lab"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Security",
+]
+dependencies = []
+
+[project.scripts]
+rangeatlas = "rangeatlas.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["rangeatlas*"]
+

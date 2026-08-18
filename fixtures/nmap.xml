@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nmaprun scanner="nmap" args="nmap -sV -oX nmap.xml 10.77.0.0/24" start="1787094000" version="7.95" xmloutputversion="1.05">
+  <host starttime="1787094002" endtime="1787094004">
+    <status state="up" reason="arp-response" />
+    <address addr="10.77.0.10" addrtype="ipv4" />
+    <hostnames><hostname name="kali.range.test" type="PTR" /></hostnames>
+    <ports>
+      <port protocol="tcp" portid="22">
+        <state state="open" reason="syn-ack" />
+        <service name="ssh" product="OpenSSH" version="9.9" method="probed" conf="10" />
+      </port>
+    </ports>
+    <os><osmatch name="Linux 6.x (synthetic fixture)" accuracy="92" /></os>
+  </host>
+  <host starttime="1787094002" endtime="1787094005">
+    <status state="up" reason="arp-response" />
+    <address addr="10.77.0.20" addrtype="ipv4" />
+    <hostnames><hostname name="range-web.test" type="PTR" /></hostnames>
+    <ports>
+      <port protocol="tcp" portid="22">
+        <state state="open" reason="syn-ack" />
+        <service name="ssh" product="OpenSSH" version="8.9" method="probed" conf="10" />
+      </port>
+      <port protocol="tcp" portid="8080">
+        <state state="open" reason="syn-ack" />
+        <service name="http-proxy" product="RangeWeb training service" version="1.0" method="probed" conf="10" />
+      </port>
+    </ports>
+    <os><osmatch name="Ubuntu Linux 22.04 (synthetic fixture)" accuracy="96" /></os>
+  </host>
+  <runstats><finished time="1787094006" timestr="Wed Aug 19 09:00:06 2026" summary="Synthetic demo" /><hosts up="2" down="0" total="2" /></runstats>
+</nmaprun>
+

@@ -1,0 +1,17 @@
+[project]
+name = "RangeAtlas Synthetic Validation"
+lab_id = "RANGE-DEMO-001"
+analyst = "Reed Stelfox"
+classification = "PUBLIC · SYNTHETIC"
+completed_at = "2026-08-19T09:30:00+10:00"
+
+[scope]
+policy = "../../config/scope.toml"
+authorised_targets = ["10.77.0.10", "10.77.0.20", "10.77.0.30"]
+
+[evidence]
+nmap_xml = "../../fixtures/nmap.xml"
+tshark_json = "../../fixtures/tshark.json"
+burp_xml = "../../fixtures/burp.xml"
+metasploit_xml = "../../fixtures/metasploit.xml"
+
