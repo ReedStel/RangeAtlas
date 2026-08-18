@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+build/
+dist/
+coverage.xml
+.coverage
+
+# Lab evidence may contain credentials, cookies, hostnames, or identifying traffic.
+evidence/
+captures/
+loot/
+*.pcap
+*.pcapng
+*.burp
+*.project
+*.workspace.zip
+testbed.local.yaml
+.env
+.env.*
+!.env.example
+
