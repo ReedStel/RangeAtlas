@@ -1,0 +1,37 @@
+name: Bug report
+description: Report a reproducible problem using synthetic evidence only
+title: "bug: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not attach real captures, credentials, Burp project files, Metasploit loot, VPN profiles, or target information.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened, and what did you expect instead?
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Synthetic reproduction
+      description: Provide the smallest synthetic example and exact command.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Python version and operating system; omit identifying host details.
+    validations:
+      required: true
+

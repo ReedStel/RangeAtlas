@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetasploitV5>
+  <generated-at>2026-08-19T09:20:00+10:00</generated-at>
+  <hosts>
+    <host>
+      <id>1</id>
+      <address>10.77.0.20</address>
+      <name>range-web.test</name>
+      <state>alive</state>
+      <os-name>Linux</os-name>
+      <os-flavor>Ubuntu synthetic fixture</os-flavor>
+      <services>
+        <service><id>10</id><port>8080</port><proto>tcp</proto><state>open</state><name>http</name><info>RangeWeb training service</info></service>
+      </services>
+      <vulns>
+        <vuln>
+          <id>20</id>
+          <name>Training service validation marker</name>
+          <info>A deliberately vulnerable fixture path was confirmed inside the isolated range. No external target was involved.</info>
+        </vuln>
+      </vulns>
+      <sessions>
+        <session>
+          <id>30</id>
+          <stype>shell</stype>
+          <via-exploit>exploit/test/range_validation</via-exploit>
+          <desc>Synthetic controlled validation</desc>
+          <opened-at>2026-08-19T09:18:15+10:00</opened-at>
+          <closed-at>2026-08-19T09:18:43+10:00</closed-at>
+        </session>
+      </sessions>
+      <creds><cred><private>THIS_VALUE_MUST_NEVER_BE_IMPORTED</private></cred></creds>
+      <loot><item>THIS_VALUE_MUST_NEVER_BE_IMPORTED</item></loot>
+    </host>
+  </hosts>
+</MetasploitV5>

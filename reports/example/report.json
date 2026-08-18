@@ -1,0 +1,180 @@
+{
+  "assets": [
+    {
+      "address": "10.77.0.10",
+      "hostname": "kali.range.test",
+      "os_name": "Linux 6.x (synthetic fixture)",
+      "services": [
+        {
+          "name": "ssh",
+          "port": 22,
+          "product": "OpenSSH",
+          "protocol": "tcp",
+          "source": "Nmap",
+          "state": "open",
+          "version": "9.9"
+        }
+      ],
+      "sources": [
+        "Nmap"
+      ],
+      "status": "up"
+    },
+    {
+      "address": "10.77.0.20",
+      "hostname": "range-web.test",
+      "os_name": "Ubuntu Linux 22.04 (synthetic fixture)",
+      "services": [
+        {
+          "name": "ssh",
+          "port": 22,
+          "product": "OpenSSH",
+          "protocol": "tcp",
+          "source": "Nmap",
+          "state": "open",
+          "version": "8.9"
+        },
+        {
+          "name": "http",
+          "port": 8080,
+          "product": "RangeWeb training service",
+          "protocol": "tcp",
+          "source": "Metasploit",
+          "state": "open",
+          "version": ""
+        },
+        {
+          "name": "http-proxy",
+          "port": 8080,
+          "product": "RangeWeb training service",
+          "protocol": "tcp",
+          "source": "Nmap",
+          "state": "open",
+          "version": "1.0"
+        }
+      ],
+      "sources": [
+        "Metasploit",
+        "Nmap"
+      ],
+      "status": "up"
+    }
+  ],
+  "findings": [
+    {
+      "confidence": "Certain",
+      "detail": "The synthetic training response did not include a Content-Security-Policy header.",
+      "path": "/",
+      "reference_id": "1001",
+      "remediation": "Define a restrictive policy and validate it in report-only mode before enforcement.",
+      "severity": "low",
+      "source": "Burp Suite",
+      "target": "10.77.0.20",
+      "title": "Content security policy is not configured"
+    },
+    {
+      "confidence": "Confirmed in isolated lab",
+      "detail": "A deliberately vulnerable fixture path was confirmed inside the isolated range. No external target was involved.",
+      "path": "",
+      "reference_id": "20",
+      "remediation": "Review the affected service and verify the relevant vendor hardening guidance.",
+      "severity": "validated",
+      "source": "Metasploit",
+      "target": "10.77.0.20",
+      "title": "Training service validation marker"
+    },
+    {
+      "confidence": "Firm",
+      "detail": "The lab service returned a detailed synthetic Server header.",
+      "path": "/health",
+      "reference_id": "1002",
+      "remediation": "Return a generic server identifier and keep exact component versions in the internal inventory.",
+      "severity": "information",
+      "source": "Burp Suite",
+      "target": "10.77.0.20",
+      "title": "Server version disclosed by response header"
+    }
+  ],
+  "metadata": {
+    "analyst": "Reed Stelfox",
+    "classification": "PUBLIC \u00b7 SYNTHETIC",
+    "completed_at": "2026-08-19T09:30:00+10:00",
+    "lab_id": "RANGE-DEMO-001",
+    "name": "RangeAtlas Synthetic Validation"
+  },
+  "source_files": [
+    "burp.xml",
+    "metasploit.xml",
+    "nmap.xml",
+    "tshark.json"
+  ],
+  "traffic": {
+    "conversations": [
+      {
+        "destination": "10.77.0.20",
+        "first_seen": "1787094002.204",
+        "last_seen": "1787094004.100",
+        "packets": 2,
+        "protocol": "HTTP",
+        "source": "10.77.0.10"
+      },
+      {
+        "destination": "10.77.0.10",
+        "first_seen": "1787094002.288",
+        "last_seen": "1787094004.204",
+        "packets": 2,
+        "protocol": "HTTP",
+        "source": "10.77.0.20"
+      },
+      {
+        "destination": "10.77.0.20",
+        "first_seen": "1787094005.444",
+        "last_seen": "1787094005.444",
+        "packets": 1,
+        "protocol": "ICMP",
+        "source": "10.77.0.10"
+      },
+      {
+        "destination": "10.77.0.20",
+        "first_seen": "1787094002.101",
+        "last_seen": "1787094002.101",
+        "packets": 1,
+        "protocol": "TCP",
+        "source": "10.77.0.10"
+      },
+      {
+        "destination": "10.77.0.30",
+        "first_seen": "1787094003.011",
+        "last_seen": "1787094003.011",
+        "packets": 1,
+        "protocol": "DNS",
+        "source": "10.77.0.10"
+      },
+      {
+        "destination": "10.77.0.10",
+        "first_seen": "1787094003.029",
+        "last_seen": "1787094003.029",
+        "packets": 1,
+        "protocol": "DNS",
+        "source": "10.77.0.30"
+      }
+    ],
+    "packets": 8,
+    "protocols": {
+      "DNS": 2,
+      "HTTP": 4,
+      "ICMP": 1,
+      "TCP": 1
+    }
+  },
+  "validations": [
+    {
+      "note": "Only session metadata was imported; credentials, loot, and payload data were excluded.",
+      "outcome": "Session recorded in sanitised workspace export",
+      "source": "Metasploit",
+      "target": "10.77.0.20",
+      "timestamp": "2026-08-19T09:18:15+10:00",
+      "title": "exploit/test/range_validation"
+    }
+  ]
+}

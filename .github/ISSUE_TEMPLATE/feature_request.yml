@@ -1,0 +1,27 @@
+name: Feature request
+description: Propose a focused defensive or reporting improvement
+title: "feature: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What authorised-lab reporting problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behaviour
+      description: Describe inputs, outputs, and safety boundaries.
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundary
+    attributes:
+      label: Safety boundary
+      options:
+        - label: This request does not require RangeAtlas to scan, exploit, capture, or contact a target.
+          required: true
+

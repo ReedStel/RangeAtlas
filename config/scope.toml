@@ -1,0 +1,6 @@
+[scope]
+name = "RangeAtlas isolated VMware lab"
+allow_cidrs = ["10.77.0.0/24"]
+require_private = true
+allow_loopback = false
+

@@ -1,0 +1,11 @@
+[
+  {"_source":{"layers":{"frame":{"frame.number":"1","frame.time_epoch":"1787094002.101","frame.protocols":"eth:ethertype:ip:tcp:ssh"},"ip":{"ip.src":"10.77.0.10","ip.dst":"10.77.0.20"},"_ws.col":{"_ws.col.Protocol":"TCP"}}}},
+  {"_source":{"layers":{"frame":{"frame.number":"2","frame.time_epoch":"1787094002.204","frame.protocols":"eth:ethertype:ip:tcp:http"},"ip":{"ip.src":"10.77.0.10","ip.dst":"10.77.0.20"},"_ws.col":{"_ws.col.Protocol":"HTTP"},"http":{"http.request.method":"GET","http.host":"range-web.test","http.request.uri":"/"}}}},
+  {"_source":{"layers":{"frame":{"frame.number":"3","frame.time_epoch":"1787094002.288","frame.protocols":"eth:ethertype:ip:tcp:http"},"ip":{"ip.src":"10.77.0.20","ip.dst":"10.77.0.10"},"_ws.col":{"_ws.col.Protocol":"HTTP"}}}},
+  {"_source":{"layers":{"frame":{"frame.number":"4","frame.time_epoch":"1787094003.011","frame.protocols":"eth:ethertype:ip:udp:dns"},"ip":{"ip.src":"10.77.0.10","ip.dst":"10.77.0.30"},"_ws.col":{"_ws.col.Protocol":"DNS"}}}},
+  {"_source":{"layers":{"frame":{"frame.number":"5","frame.time_epoch":"1787094003.029","frame.protocols":"eth:ethertype:ip:udp:dns"},"ip":{"ip.src":"10.77.0.30","ip.dst":"10.77.0.10"},"_ws.col":{"_ws.col.Protocol":"DNS"}}}},
+  {"_source":{"layers":{"frame":{"frame.number":"6","frame.time_epoch":"1787094004.100","frame.protocols":"eth:ethertype:ip:tcp:http"},"ip":{"ip.src":"10.77.0.10","ip.dst":"10.77.0.20"},"_ws.col":{"_ws.col.Protocol":"HTTP"}}}},
+  {"_source":{"layers":{"frame":{"frame.number":"7","frame.time_epoch":"1787094004.204","frame.protocols":"eth:ethertype:ip:tcp:http"},"ip":{"ip.src":"10.77.0.20","ip.dst":"10.77.0.10"},"_ws.col":{"_ws.col.Protocol":"HTTP"}}}},
+  {"_source":{"layers":{"frame":{"frame.number":"8","frame.time_epoch":"1787094005.444","frame.protocols":"eth:ethertype:ip:icmp"},"ip":{"ip.src":"10.77.0.10","ip.dst":"10.77.0.20"},"_ws.col":{"_ws.col.Protocol":"ICMP"}}}}
+]
+
